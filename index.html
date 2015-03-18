@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <script lang="javascript">
+      sites = ["http://www.google.com", "http://www.baidu.com", "http://www.renren.com"];
+      cur = 0;
+      w = null;
+      function loadsite() {
+      if (w != null) {
+      w.close();
+      }
+      w = window.open(sites[cur % sites.length]);
+      cur = cur + 1;
+      console.log(cur);
+      }
+      setInterval(loadsite, 20000);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
